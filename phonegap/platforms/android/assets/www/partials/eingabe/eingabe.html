@@ -1,0 +1,59 @@
+<div content-for="titlekapp">
+  <span>Eingabe</span>
+  <button class="btn btn-primary" ng-click="newGame()">Neues Spiel</button>
+  <button class="btn btn-primary" ng-click="saveGame()">Speichern</button>
+  <button class="btn btn-primary" ng-click="loadGame()">Spiel laden</button>
+</div>
+
+<!-- EINGABE.html -->
+<div class="scrollable">
+    <div class="scrollable-content section">
+      <div class="panel-group" id="accordion">
+
+        <!-- METADATEN -->
+        <div class="panel panel-default">
+          <div class="panel-heading" toggle target="collapseOne">
+            <h4 class="panel-title">
+               Metadaten 
+            </h4>
+          </div>
+          <div id="collapseOne" toggleable active-class="in" exclusion-group="accordion1" default="active" class="panel-collapse collapse">
+            <div class="panel-body">
+              <div ng-include src="'partials/eingabe/metadata.html'"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- EINGABE -->
+        <div class="panel panel-default">
+          <div class="panel-heading" toggle target="collapseTwo">
+            <h4 class="panel-title">
+               Eingabe 
+            </h4>
+          </div>
+          <div id="collapseTwo" toggleable active-class="in" exclusion-group="accordion1" class="panel-collapse collapse">
+            <div class="panel-body">
+              <div ng-include src="'partials/eingabe/input.html'"></div>
+            </div>
+          </div>
+        </div>
+
+        <!-- AUSGABE -->
+        <div class="panel panel-default">
+          <div class="panel-heading" toggle target="collapseThree">
+            <h4 class="panel-title">
+               Ausgabe 
+            </h4>
+          </div>
+          <div id="collapseThree" toggleable active-class="in" exclusion-group="accordion1" class="panel-collapse collapse">
+            <div class="panel-body">
+              <div ng-include src="'partials/eingabe/output.html'"></div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+</div>
+
+

@@ -1,0 +1,58 @@
+<!-- METADATA -->
+{{spiel.id}}
+{{spiel.schreiber}}
+{{spiel.startbahn}}
+<!-- SPIELORT -->
+<div class="form-group">
+    <label for="spielort">Spielort</label>
+    <select class="form-control" ng-model="spiel.spielort">
+        <option
+          ng-selected="{{spiel.spielort}}"
+          ng-repeat="spielort in daten.spielorte"
+           value="{{spielort}}">
+            {{spielort}}
+        </option>
+    </select>
+</div>
+
+<!-- STARTBAHN -->
+<div class="form-group">
+    <label for="startbahn">Startbahn</label>
+    <select class="form-control" ng-model="spiel.startbahn">
+        <option
+          ng-selected="{{spiel.startbahn == filterCondition.startbahn}}"
+          ng-repeat="startbahn in daten.startbahnen"
+           value="{{startbahn}}">
+            {{startbahn}}
+        </option>
+    </select>
+</div>
+
+<!-- STARTBAHN 
+<div class="form-group">
+    <label for="startbahn">Startbahn</label>
+    <select class="form-control" ng-options="startbahn.nummer for startbahn in daten.startbahnen" ng-model="spiel.startbahn" id="startbahn">
+      <option value="">Bitte wählen</option>
+    </select>
+</div>
+-->
+
+<!-- SCHREIBER -->
+<input
+ bs-form-control
+ type="text" 
+ ng-model="spiel.schreiber"
+ label="Schreiber" label-class="col-xs-12 col-sm-12 col-lg-12" 
+ class="col-xs-12 col-sm-12 col-lg-12"
+ placeholder="Schreiber"
+/>
+
+<!-- DATUM -->
+<input
+ bs-form-control
+ type="date" 
+ ng-model="spiel.datum"
+ label="Datum"
+ label-class="col-xs-12 col-sm-12 col-lg-12"
+ class="col-xs-12 col-sm-12 col-lg-12"
+ />

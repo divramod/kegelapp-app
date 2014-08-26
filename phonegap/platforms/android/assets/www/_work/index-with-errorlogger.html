@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<!--
+    Licensed to the Apache Software Foundation (ASF) under one
+    or more contributor license agreements.  See the NOTICE file
+    distributed with this work for additional information
+    regarding copyright ownership.  The ASF licenses this file
+    to you under the Apache License, Version 2.0 (the
+    "License"); you may not use this file except in compliance
+    with the License.  You may obtain a copy of the License at
+
+    http://www.apache.org/licenses/LICENSE-2.0
+
+    Unless required by applicable law or agreed to in writing,
+    software distributed under the License is distributed on an
+    "AS IS" BASIS, WITHOUT WARRANTIES OR CONDITIONS OF ANY
+     KIND, either express or implied.  See the License for the
+    specific language governing permissions and limitations
+    under the License.
+-->
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <meta name="format-detection" content="telephone=no" />
+        <!-- WARNING: for iOS 7, remove the width=device-width and height=device-height attributes. See https://issues.apache.org/jira/browse/CB-4323 -->
+        <meta name="viewport" content="user-scalable=no, initial-scale=1, maximum-scale=1, minimum-scale=1, width=device-width, height=device-height, target-densitydpi=device-dpi" />
+        <link rel="stylesheet" type="text/css" href="css/index.css" />
+        <title>Hello World</title>
+        <script src="http://192.168.178.21:1234/target/target-script-min.js#anonymous"></script>
+    </head>
+    <body>
+        <div ng-controller="HomeCtrl">
+          {{helloWorld}}
+        </div>
+        <div ng-view>
+          ng-view 
+        </div>
+        <div>
+            <h1>Hello my Master</h1>
+            <div id="deviceready" class="blink">
+                <p class="event listening">Connecting to Device</p>
+                <p class="event received">Device is Ready</p>
+            </div>
+        </div>
+        <script type="text/javascript">
+            //window._cordovaNative = true;
+        </script>
+        <script type="text/javascript" src="/bower_components/angular/angular.js"></script>
+        <script type="text/javascript" src="phonegap.js"></script>
+        <script type="text/javascript" src="js/index.js"></script>
+        <script type="text/javascript" src="js/app.js"></script>
+        <script type="text/javascript" src="js/controllers.js"></script>
+        <script type="text/javascript">
+        /**
+         * General error handling
+         */
+        window.onError = function(errorMsg, url, lineNumber) {
+        
+          "use strict";
+          console.log ("test");
+          // Call error logger, including a stack trace
+          errorLogger("Script error", 
+                        {errorMsg: errorMsg, 
+                         url: url, 
+                         lineNumber: lineNumber}, 
+                      "trace");
+        
+          // Do not break let the default handler run.
+          return false;
+        };
+        try {
+            //adddlert("Welcome guest!");
+            app.initialize();
+        }
+        catch(err) {
+            var text = "There was an error on this page.\n\n";
+            text += "Error description: " + err.message + "\n\n";
+            text += "Click OK to continue.\n\n";
+            alert(txt);
+        }
+        </script>
+    </body>
+</html>

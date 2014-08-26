@@ -1,0 +1,23 @@
+<!-- EINGABE.html -->
+<div class="scrollable">
+    <div class="scrollable-content section">
+      Daten: {{data}}
+        <table border="" class="table table-striped">
+            <tr>
+                <td>ID</td> 
+                <td>Startbahn</td> 
+                <td>Aktionen</td> 
+            </tr>
+            <tr ng-repeat='game in games'>
+                <td>{{game.id}}</td>
+                <td>{{game.startbahn}}</td>
+                <td>
+                  <button
+                    class="btn btn-primary"
+                    ng-click="updateGame(game.id)")>
+                    Bearbeiten</button>
+                </td>
+            </tr>
+        </table>
+    </div>
+</div>

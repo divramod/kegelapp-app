@@ -1,0 +1,24 @@
+
+<!-- REGISTER -->
+
+<form name="registerForm" ng-submit="register(credentials)" novalidate>
+  <!-- USERNAME -->
+  <input
+   bs-form-control
+   type="text" 
+   ng-model="credentials.username"
+   label="Username" label-class="col-xs-2 col-sm-12 col-lg-12" 
+   class="col-xs-6 col-sm-12 col-lg-12"
+  />
+
+  <!-- PASSWORD -->
+  <input
+   bs-form-control
+   type="password" 
+   ng-model="credentials.password"
+   label="Passwort" label-class="col-xs-2 col-sm-12 col-lg-12" 
+   class="col-xs-6 col-sm-12 col-lg-12"
+  />
+
+  <button class="btn btn-primary" ntype="submit">Registrieren</button>
+</form>

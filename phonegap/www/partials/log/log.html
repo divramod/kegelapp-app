@@ -1,0 +1,40 @@
+<!-- SCROLLABLE -->
+<div class="scrollable">
+    <div class="scrollable-content section">
+        <div class="panel-group" id="accordion">
+            <!-- LOGIN -->
+            <div class="panel panel-default">
+                <div class="panel-heading" toggle target="collapseOne">
+                     <h4 class="panel-title">
+               Login 
+            </h4>
+
+                </div>
+                <div id="collapseOne" toggleable active-class="in" exclusion-group="accordion1"
+                default="active" class="panel-collapse collapse">
+                    <div class="panel-body">
+                        <div ng-include src="'partials/log/login.html'"></div>
+                    </div>
+                </div>
+            </div>
+            <!-- REGISTER -->
+            <div class="panel panel-default">
+                <div class="panel-heading" toggle target="collapseTwo">
+                     <h4 class="panel-title">
+               Registrieren 
+            </h4>
+
+                </div>
+                <div id="collapseTwo" toggleable active-class="in" exclusion-group="accordion1"
+                class="panel-collapse collapse">
+
+                    <div class="panel-body">
+                        <div ng-include src="'partials/log/register.html'"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- SCROLLABLE -->
+</div>
+</div>
